@@ -38,5 +38,25 @@ public class Funcoes {
 
         System.out.println(str.length());
 
+        //Exceção em funções
+        String exc = "Curso de Java";
+
+        try{
+            //isso vai dar erro se tiver fora do try
+//            exc.charAt(200);
+
+            //Erro com null exception
+            String s = null;
+            System.out.println(s.length());
+        } catch (NullPointerException e){
+            System.out.println("NullPointer");
+        } catch (StringIndexOutOfBoundsException e){
+            System.out.println("Não existem tantos caracteres");
+        } catch (Exception e){
+            System.out.println("Não existem tantos caracteres 2");
+        } finally {
+            System.out.println("Sempre executo!");
+        }
+        System.out.println("teste");
     }
 }
